@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "149e0bdb-af5f-4aec-9b0b-bf1d4388f5ab",
+		"name": "Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12353392"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJleHAiOjE5NDY2NTg4NDR9.EkIO37OE-7_DfaG4CE-T05M1KanihbRyhY2LXz30kkQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"name\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.228.44.87:8282:8282/v1/categories",
+					"protocol": "http",
+					"host": [
+						"18",
+						"228",
+						"44",
+						"87:8282"
+					],
+					"port": "8282",
+					"path": [
+						"v1",
+						"categories"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://localhost:8282/v1/categories\" -H \"accept: */*\" -H \"Content-Type: application/json\" -d \"{ \\\"name\\\": \\\"string\\\"}\""
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJleHAiOjE5NDY2ODg2ODl9.K2kGNQLud9Zn-fM-dPAuT8Rfi_sH0eJ87FRywikJU9g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"4K Ultra HD TV\",\n    \"description\": \"Ultra HD television with 4K resolution\",\n    \"price\": 399.99,\n    \"category\": {\n        \"id\": 6\n    },\n    \"available\": true\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.228.44.87:8282:8282/v1/products/1",
+					"protocol": "http",
+					"host": [
+						"18",
+						"228",
+						"44",
+						"87:8282"
+					],
+					"port": "8282",
+					"path": [
+						"v1",
+						"products",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://localhost:8282/v1/categories\" -H \"accept: */*\" -H \"Content-Type: application/json\" -d \"{ \\\"name\\\": \\\"string\\\"}\""
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJleHAiOjE5NDY2ODg2ODl9.K2kGNQLud9Zn-fM-dPAuT8Rfi_sH0eJ87FRywikJU9g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.228.44.87:8282/v1/products/1",
+					"protocol": "http",
+					"host": [
+						"18",
+						"228",
+						"44",
+						"87"
+					],
+					"port": "8282",
+					"path": [
+						"v1",
+						"products",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://localhost:8282/v1/categories\" -H \"accept: */*\" -H \"Content-Type: application/json\" -d \"{ \\\"name\\\": \\\"string\\\"}\""
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJleHAiOjE5NDY2NjE0MTB9.W_q6JZnOr-MRr_dGwxuZnKMvtQeLeh-sQ76grFNzhRY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"string\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.228.44.87:8282:8282/v1/products/1",
+					"protocol": "http",
+					"host": [
+						"18",
+						"228",
+						"44",
+						"87:8282"
+					],
+					"port": "8282",
+					"path": [
+						"v1",
+						"products",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://localhost:8282/v1/categories\" -H \"accept: */*\" -H \"Content-Type: application/json\" -d \"{ \\\"name\\\": \\\"string\\\"}\""
+			},
+			"response": []
+		},
+		{
+			"name": "Categories",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJleHAiOjE5NDY2NjE0MTB9.W_q6JZnOr-MRr_dGwxuZnKMvtQeLeh-sQ76grFNzhRY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"string\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.228.44.87:8282/v1/categories",
+					"protocol": "http",
+					"host": [
+						"18",
+						"228",
+						"44",
+						"87"
+					],
+					"port": "8282",
+					"path": [
+						"v1",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://localhost:8282/v1/categories\" -H \"accept: */*\" -H \"Content-Type: application/json\" -d \"{ \\\"name\\\": \\\"string\\\"}\""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"email\": \"email@gmail.com\",\n    \"password\": \"123123\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.228.44.87:8282/auth/login",
+					"protocol": "http",
+					"host": [
+						"18",
+						"228",
+						"44",
+						"87"
+					],
+					"port": "8282",
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"http://localhost:8282/auth/login\" -H \"accept: */*\" -H \"Content-Type: application/json\" -d \"{ \\\"password\\\": \\\"string\\\", \\\"username\\\": \\\"string\\\"}\""
+			},
+			"response": []
+		}
+	]
+}

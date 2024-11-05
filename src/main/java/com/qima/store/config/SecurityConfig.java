@@ -62,7 +62,7 @@ public class SecurityConfig  {
     private CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(List.of("http://ec2-18-228-44-87.sa-east-1.compute.amazonaws.com:4200"));
+        config.setAllowedOrigins(List.of("http://ec2-18-228-44-87.sa-east-1.compute.amazonaws.com:4200", "http://localhost:4200"));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
