@@ -1,7 +1,6 @@
 package com.qima.store.controller;
 
 import com.qima.store.dto.ProductDTO;
-import com.qima.store.model.types.ProjectStatus;
 import com.qima.store.resource.ProductResource;
 import com.qima.store.service.ProductService;
 import com.qima.store.translate.ProductTranslator;
@@ -13,8 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.data.domain.Sort;
-
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "/v1/products")
@@ -38,17 +35,11 @@ public class ProductController {
         return ResponseEntity.ok(productList);
     }
 
-    @GetMapping("/status/{status}")
-    public ResponseEntity<List<ProductDTO>> listByStatus(@PathVariable ProjectStatus status) {
-        List<ProductDTO> projectList = null;//service.listByStatus(status);
-        return ResponseEntity.ok(projectList);
-    }
-
     @PostMapping
     public ResponseEntity create(@RequestBody @Validated ProductResource productResource) {
         return service
                 .create(ProductTranslator.toModel(productResource))
-                .map(project -> ResponseEntity.ok().build())
+                .map(product -> ResponseEntity.ok().build())
                 .orElseThrow(RuntimeException::new);
     }
 
@@ -56,7 +47,7 @@ public class ProductController {
     public ResponseEntity update(@PathVariable Long id, @RequestBody @Validated ProductResource productResource) {
         return service
                 .update(ProductTranslator.toEntity(productResource, id))
-                .map(project -> ResponseEntity.ok().build())
+                .map(product -> ResponseEntity.ok().build())
                 .orElseThrow(RuntimeException::new);
     }
 
